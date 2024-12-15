@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Jogo da Memória</title>
+    <link rel="stylesheet" href="{% static 'css/estiloNome.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+
+        <form class="form" id="loginForm" method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+
+            <input type="text" name="username" id="username" placeholder="Insira seu usuário" class="input" required>
+            <input type="password" name="password" id="password" placeholder="Insira sua senha" class="input" required>
+            <div>
+                <button type="submit" id="submitButton" class="btn btn-login">Entrar</button>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'js/scriptLogin.js' %}"></script>
+</body>
+
+</html>

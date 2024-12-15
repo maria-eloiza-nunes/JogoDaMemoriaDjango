@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(125deg, #0e5797, #fca833);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff5e1;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    color: #fca833;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #0e5797;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+
+.btn {
+    background-color: #ffcc80;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 10px;
+    width: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #ffb74d;
+}
+
+.btn-play {
+    background-color: #ff7043;
+}
+
+.btn-ranking {
+    background-color: #66bb6a;
+}
+
+.btn-play:hover {
+    background-color: #f4511e;
+}
+
+.btn-ranking:hover {
+    background-color: #43a047;
+}

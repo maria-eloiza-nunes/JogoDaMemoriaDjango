@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="{% static 'css/estiloRanking.css' %}">
+</head>
+
+<body>
+    <button class="btn-back" onclick="window.location.href='/'">Voltar</button>
+    <div class="container">
+        <h1>Ranking</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Tentativas</th>
+                    <th>Data e Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in jogadores %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{x.nomeJogador}}</td>
+                    <td>{{x.tentativas}}</td>
+                    <td>{{x.data}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

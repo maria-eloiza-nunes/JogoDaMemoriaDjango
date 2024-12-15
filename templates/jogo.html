@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="{% static 'css/estiloJogo.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'img/logo.jogo.png' %}">
+        <div class="game-board" id="game-board"></div>
+
+        <p>Tentativas: <span id="moves-counter">0</span></p>
+        <div class="footer">
+            <p><strong>Disciplina:</strong> Programação para Internet</p>
+            <p><strong>Professor:</strong> Marcelo Figueiredo Barbosa Júnior</p>
+            <p><strong>Alunas:</strong> Fábia Yasmim, Maria Eloiza Nunes</p>
+            <p>IFRN - Campus Santa Cruz/RN</p>
+            <p>Todos os direitos reservados ⓒ</p>
+        </div>
+    </div>
+    <form id="add" action="{% url 'add' %}" method="POST">
+        {% csrf_token %}
+        <input id="nomeJogador" type="text" name="nomeJogador" hidden>
+      <input id="tentativas" type="text" name="tentativas" hidden>
+    </form>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
